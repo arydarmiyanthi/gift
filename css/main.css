@@ -1319,3 +1319,54 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+
+.flower-description {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  z-index: 9999;
+}
+
+.flower-description p {
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #ffc0cb;
+}
+
+.typing-container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 200;
+  width: 90%;
+}
+
+#typing-text {
+  font-family: 'Georgia', serif;     /* font serif klasik */
+  font-size: 1.4rem;                 /* agak besar dan jelas */
+  line-height: 1.6;
+  text-align: center;
+  white-space: pre-line;             /* agar \n jadi baris baru */
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+  color: white;                      /* warna teks putih */
+}
+
+@media (max-width: 768px) {
+  #typing-text {
+    font-size: 1rem; /* lebih kecil dari sebelumnya */
+    padding: 10px;
+  }
+}
+
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}

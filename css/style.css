@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
-*{
-    font-family: 'Poppins',cursive;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+* {
+  font-family: 'Playfair Display', serif;
 }
+
 body{
     color: azure;
     width: 100%;
@@ -68,3 +70,119 @@ body{
         font-size: .5rem;
     }
 }
+
+.description {
+    text-align: center;
+    margin: 0 20px;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button button {
+    padding: 14px 32px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #111;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
+}
+
+.button button:hover {
+    transform: scale(1.05);
+}
+
+.button a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 574px) {
+    .description {
+        font-size: 1rem;
+        margin: 0 30px;
+        padding: 10px 0;
+        letter-spacing: 0.3px;
+    }
+
+    .button {
+        width: auto;
+    }
+
+    .button button {
+        width: auto;
+        font-size: 1.2rem;
+        padding: 12px 28px;
+        letter-spacing: 0.8px;
+    }
+
+    .button a {
+        font-size: 1.2rem;
+    }
+}
+.flower-description {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+.flower-description h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ffb6c1;
+}
+
+.flower-description p {
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #ffc0cb;
+}
+
+.typing-container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 200;
+  width: 90%;
+}
+
+#typing-text {
+  font-family: 'Georgia', serif;     /* font serif klasik */
+  font-size: 1.4rem;                 /* agak besar dan jelas */
+  line-height: 1.6;
+  text-align: center;
+  white-space: pre-line;             /* agar \n jadi baris baru */
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+  color: white;                      /* warna teks putih */
+}
+
+@media (max-width: 768px) {
+  #typing-text {
+    font-size: 0.5rem; /* lebih kecil dari sebelumnya */
+    padding: 10px;
+  }
+}
+
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
+

@@ -9,8 +9,11 @@
     <title>flowers</title>
 </head>
 <body class="container">
-  <!-- Pembuat code: https://codepen.io/mdusmanansari/pen/BamepLe -->
     <div class="night"></div>
+   <div class="typing-container">
+  <p id="typing-text"></p>
+</div>
+
     <div class="flowers">
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
@@ -308,9 +311,31 @@
       </div>
     </div>
     <audio autoplay loop>
-      <source src="lagu.mp3" type="audio/mpeg">
+      <source src="lagu/bruno.mp3" type="audio/mpeg">
       Browser kamu tidak mendukung audio tag.
     </audio>    
     <script src="main.js"></script>
+    <script>
+  const text = `But every time she asks me, 
+"Do I look okay?"
+I say When I see your face
+There's not a thing that I would change
+'Cause you're amazing
+Seperti anzinggg wkwk becanda`;
+
+  const speed = 140; // kecepatan ketik
+  let i = 0;
+
+  function typeText() {
+    if (i < text.length) {
+      document.getElementById("typing-text").textContent += text.charAt(i);
+      i++;
+      setTimeout(typeText, speed);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeText);
+</script>
+
   </body>
 </html>
